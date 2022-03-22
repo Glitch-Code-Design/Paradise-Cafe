@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,700;0,800;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',  sans-serif;
+}
+
+:root {
+    --main-light: #dadace; 
+    --main-dark: #313030;
+    --fb:#3b5998;
+    --fb-dark:#497ff3;
+    --insta: #dd2a7b;
+    --twitter:#1da1f2;
+}
+
+.wrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8rem;
+    cursor: default;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    animation: container 1s ease-in;
+}
+
+@keyframes container {
+    0% {
+        opacity: 0;
+        transform: translateZ(-3%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container .left-section h2 {
+    text-transform: capitalize;
+    font-size: 2.2rem;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: var(--main-dark);
+} 
+
+.container .left-section .text {
+    font-size: .89rem;
+    max-width: 700px;
+    line-height: 1.5;
+    margin: .55rem 0 1rem;
+    letter-spacing: 1px;
+    color: var(--main-dark);
+}
+
+.container .left-section .social-media a {
+    display: inline-block;
+    justify-content: space-between;
+    margin-right: 2.5rem;
+    transition: .5s linear;
+}
+
+.container .left-section .social-media i {
+    font-size: 1.4rem;
+    color: var(--main-dark);
+    transition: .2s linear;
+}
+
+.social-media #icon-fb:hover {
+    color: var(--fb);
+}
+
+.social-media #icon-insta:hover {
+    color: var(--insta);
+}
+
+.social-media #icon-twitter:hover {
+    color: var(--twitter);
+}
+
+.right-section img {
+    height: auto;
+    width: 80%;
+    margin-top: 2.5rem;
+    margin-left: 5rem;
+}
+
+@media screen and (max-width: 876px) {
+    .wrapper {
+        padding: 6rem;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-gap: 2rem;
+    }
+    .container .left-section .text {
+        padding: 2rem 0;
+        font-size: .95rem;
+        max-width: 700px;
+    }
+    .right-section img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 532px) {
+    .container .left-section .text {
+        font-size: .95rem;
+    }
+    .container .left-section .social-media {
+        display: flex;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .container .left-section h2 {
+        color: var(--main-light);
+    }
+    .container .left-section .text {
+        color: var(--main-light);
+    }
+    .container .left-section .social-media i {
+        color: var(--main-light);
+    }
+    .social-media #icon-fb:hover {
+        color: var(--fb-dark);
+    }
+}

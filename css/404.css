@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-light: #dadace;
+    --main-dark: #312f2f;
+    --btn: #af7e5b;
+    --btn-light: #a37351;
+    --btn-border: #b4b4a9;
+}
+
+body {
+    min-height: 100vh;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--main-dark);
+    width: 100%;
+}
+
+.container h2 {
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 10rem;
+    letter-spacing: 15px;
+}
+
+.container p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-transform: capitalize;
+}
+
+a {
+    margin-top: 2rem;
+    position: relative;
+    display: inline-block;
+    padding: .35rem .35rem;
+    color: var(--main-dark);
+    border: var(--btn-border) solid 2px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    overflow: hidden;
+}
+
+a span {
+    position: relative;
+    z-index: 2;
+    transition: 1s;
+}
+
+a:hover span {
+    color: var(--main-light);
+}
+
+a .waves {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+    background: var(--btn-light);
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
+a:hover .waves {
+    top: 0;
+}
+
+a .waves::before {
+    position: absolute;
+    content: '';
+    top: -18px;
+    left: 0;
+    background: url(../wave.svg);
+    height: 18px;
+    width: 100%;
+    animation: coffee .6s linear infinite;
+}
+
+.btn {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes coffee {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 90px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 532px) {
+    .container h2 {
+        font-size: 5rem;
+    }
+    .container p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    .container{
+        color: var(--main-light);
+    }
+    a {
+        color: var(--main-light);
+    }
+    a .waves {
+        background-color: var(--btn);
+    }
+}

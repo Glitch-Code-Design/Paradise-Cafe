@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&family=Poppins:wght@100;200;300;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',  sans-serif;
+}
+
+:root {
+    --main-light: #dadace; 
+    --main-dark: #313030;
+    --font: #4e4d4d;
+}
+
+html {
+    scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+    width: .65vw;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--main-light);
+    border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--font);
+}
+
+body {
+    min-height: 100vh;
+    cursor: default;
+}
+
+.container h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    color: var(--main-dark);
+    animation: menu 1s ease-in;
+}
+
+.container ul {
+    text-transform: capitalize;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+    list-style-position: inside;
+    list-style: none;
+    color: var(--main-dark);
+    animation: menu 1s ease-in;
+}
+
+@keyframes menu {
+    0% {
+        opacity: 0;
+        transform: translateY(-1%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container ul .coffee, .tea, .milkshakes, .cold-drinks, .pastry, .cakes {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+
+.container ul li {
+    line-height: 1.2;
+    padding: .45rem;
+}
+
+.container ul li p {
+    color: var(--font);
+    font-size: .95rem;
+    text-transform: none;
+    padding: .45rem;
+}
+
+@media screen and (max-width: 876px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (prefers-color-scheme: dark ) {
+    html {
+        scrollbar-color: var(--main-dark) var(--font);
+    }
+    html::-webkit-scrollbar {
+        width: .65vw;
+    }
+    html::-webkit-scrollbar-thumb {
+        background-color: var(--main-dark);
+        border-radius: 10px;
+    }
+    html::-webkit-scrollbar-thumb {
+        background-color: var(--font);
+    }
+    .container h2 {
+        color: var(--main-light);
+    }
+    .container ul {
+        color: var(--main-light);
+    }
+}
