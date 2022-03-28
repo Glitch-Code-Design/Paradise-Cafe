@@ -290,7 +290,6 @@ a .waves::before {
         height: 100%;
         width: 100%;
         background-color: var(--bg-light);
-        transition: .5s;
         transform: translateX(100%);
         z-index: 15;
     }
