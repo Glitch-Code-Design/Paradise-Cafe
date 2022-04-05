@@ -353,6 +353,12 @@ a .waves::before {
     }
 }
 
+@media screen and (orientation: landscape) and (max-width: 740px) {
+    .container .links ul li a {
+        padding: 1.5rem;
+    } 
+}
+
 @media (prefers-color-scheme:dark) {
     .wrapper {
         background-color: var(--bg-dark-alt);
