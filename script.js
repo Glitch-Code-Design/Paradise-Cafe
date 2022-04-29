@@ -6,5 +6,5 @@ hamburger_menu.addEventListener('click', () => {
 });
 
 hamburger_menu.addEventListener('click', () => {
-    document.body.classList.toggle('no-scroll')
+    document.body.classList.toggle('no-scroll');
 });
