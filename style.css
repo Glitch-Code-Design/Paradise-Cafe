@@ -484,7 +484,7 @@ a .waves::before {
     .showcase .container .left-section a,
     a:visited {
         color: var(--main-light);
-        opacity: 75%;
+        opacity: 85%;
     }
     a .waves {
         background-color: var(--btn);
