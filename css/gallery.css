@@ -10,15 +10,33 @@
 :root {
     --bg-light: #f5f5f5;
     --bg-dark: #1b1b1b;
-    --main-light: #dadace; 
+    --main-light: #c3c3c3; 
     --main-dark: #313030;
+    --btn: #af7e5b;
     --border: #a37351;
+    --font: #4e4d4d;
+}
+
+html {
+    scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+    width: .65vw;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--main-light);
+    border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--font);
 }
 
 .wrapper {
     position: relative;
     min-height: 100vh;
     -webkit-tap-highlight-color: transparent;
+    background: var(--bg-light);
 }
 
 .img-container {
@@ -70,7 +88,7 @@
     top: 0;
     right: .75rem;
     font-size: 2.1rem;
-    color: var(--main-dark);
+    color: var(--btn);
     z-index: 5;
     cursor: pointer;
 }
@@ -98,7 +116,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .img-container .img-popup span {
-        color: var(--main-light);
+    .wrapper {
+        background: var(--bg-dark);
+    }
+    .img-container .img-popup {
+        background: var(--bg-dark);
     }
 }
