@@ -10,14 +10,30 @@
 :root {
     --bg-light: #f5f5f5;
     --bg-dark: #1b1b1b;
-    --main-light: #dadace; 
+    --main-light: #c3c3c3; 
     --main-dark: #313030;
+}
+
+html {
+    scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+    width: .65vw;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--main-light);
+    border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--font);
 }
 
 body {
     min-height: 100vh;
     display: grid;
     place-items: center center;
+    background: var(--bg-light);
     cursor: default;
 }
 
@@ -74,10 +90,12 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-    .cards h3 {
-        color: var(--main-light);
+    body {
+        background: var(--bg-dark);
     }
+    .cards h3,
     .cards p {
         color: var(--main-light);
+        opacity: 85%;
     }
 }
