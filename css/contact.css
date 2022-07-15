@@ -14,7 +14,8 @@
     --main-dark: #313030;
     --text-dark: #dadace;
     --form-light: #a37351;
-    --form-dark: #8b6144;
+    --form-dark: #694b36;
+    --btn-dark: #744c31;
     --shadow: #3d3a3a;
 }
 
@@ -157,7 +158,7 @@ form a:active {
     form a {
         color: var(--main-dark);
         border: var(--main-dark) 2px solid;
-        background-color: var(--form-light);
+        background-color: var(--btn-dark);
     }
     form a span {
         color: var(--text-dark);
