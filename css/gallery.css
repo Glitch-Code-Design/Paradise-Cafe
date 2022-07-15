@@ -14,22 +14,6 @@
     --main-dark: #313030;
     --btn: #af7e5b;
     --border: #a37351;
-    --font: #4e4d4d;
-}
-
-html {
-    scrollbar-width: thin;
-}
-
-html::-webkit-scrollbar {
-    width: .65vw;
-}
-html::-webkit-scrollbar-thumb {
-    background-color: var(--main-light);
-    border-radius: 10px;
-}
-html::-webkit-scrollbar-thumb {
-    background-color: var(--font);
 }
 
 .wrapper {

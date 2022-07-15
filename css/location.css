@@ -12,22 +12,6 @@
     --bg-dark: #1b1b1b;
     --main-light: #c3c3c3; 
     --main-dark: #313030;
-    --font: #4e4d4d;
-}
-
-html {
-    scrollbar-width: thin;
-}
-
-html::-webkit-scrollbar {
-    width: .65vw;
-}
-html::-webkit-scrollbar-thumb {
-    background-color: var(--main-light);
-    border-radius: 10px;
-}
-html::-webkit-scrollbar-thumb {
-    background-color: var(--font);
 }
 
 body {
