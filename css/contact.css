@@ -10,7 +10,7 @@
 :root {
     --bg-light: #f5f5f5;
     --bg-dark: #1b1b1b;
-    --main-light: #212121; 
+    --main-light: #c3c3c3; 
     --main-dark: #313030;
     --text-dark: #dadace;
     --form-light: #a37351;
@@ -21,7 +21,7 @@
 body {
     min-height: 100vh;
     width: 100%;
-    color: var(--main-light);
+    background: var(--bg-light);
     animation: contact-form 1s ease-in;
     -webkit-tap-highlight-color: transparent;
     cursor: default;
@@ -138,9 +138,9 @@ form a:active {
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    .body {
-        color: var(--main-light);
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: var(--bg-dark);
     }
     .contact-box {
         background-color: var(--form-dark);
@@ -148,19 +148,18 @@ form a:active {
     }
     .contact-box h2 {
         color: var(--text-dark);
+        opacity: 85%;
     }
     form .input {
         background-color: var(--main-light);
+        opacity: 95%;
     }
     form a {
-        color: var(--main-light);
+        color: var(--main-dark);
         border: var(--main-dark) 2px solid;
-        background-color: var(--main-light);
+        background-color: var(--form-light);
     }
     form a span {
         color: var(--text-dark);
-    }
-    form a .waves {
-        background-color: var(--form-dark);
     }
 }
