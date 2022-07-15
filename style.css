@@ -11,7 +11,7 @@
     --bg-light: #f5f5f5;
     --bg-dark: #1b1b1b;
     --bg-dark-alt: #121212;
-    --main-light: #dadace; 
+    --main-light: #c3c3c3; 
     --main-dark: #313030;
     --hover-light: #d39266;
     --hover-dark: #a0673f;
@@ -115,6 +115,10 @@ header .container {
 
 .links a:hover {
     color: var(--hover-dark);
+}
+
+.links a:visited {
+    color: var(--main-dark);
 }
 
 .hamburger-menu {
@@ -452,6 +456,8 @@ a .waves::before {
     }
     .logo img {
         color: var(--main-light);
+        filter: invert(1);
+        opacity: 75%;
     }
     .logo h3 {
         color: var(--main-light);
@@ -459,7 +465,8 @@ a .waves::before {
     .links {
         background-color: var(--bg-dark-alt);
     }
-    .links a {
+    .links a,
+    .links a:visited {
         color: var(--main-light);
     }
     .links a:hover {
@@ -468,25 +475,22 @@ a .waves::before {
     .hamburger-menu {
         background-color: transparent;
     }
-    .hamburger-menu .bar {
-        background-color: var(--btn);
-    }
+    .hamburger-menu .bar,
     .bar::before, .bar::after {
         background-color: var(--btn);
     }
-    .showcase .container .left-section .main-title {
-        color: var(--main-light);
-    }
-    .showcase .container .left-section .text {
-        color: var(--main-light);
-    }
-    .showcase .container .left-section a {
-        color: var(--main-light);
-    }
+    .showcase .container .left-section .main-title,
+    .showcase .container .left-section .text,
+    .showcase .container .left-section a,
     a:visited {
         color: var(--main-light);
+        opacity: 75%;
     }
     a .waves {
         background-color: var(--btn);
+    }
+    .right-section img {
+        filter: invert(1);
+        opacity: 75%;
     }
 }
